@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" href="Images\logo_basic.png" sizes="32x32">
   <link rel="stylesheet" href="Css\Index.css">
   <link rel="stylesheet" href="Css\Global.css">
+  <link rel="stylesheet" href="Js/Detalle.js">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -44,6 +45,15 @@
               </ul>
             </li>
           </ul>
+        </div>
+        <div class="d-flex align-items-center ms-auto">
+          <a href="#" class="me-2">
+            <img src="Images/cart-icon.png" alt="Carrito" class="navbar-icon">
+          </a>
+          <a href="#" class="me-3">
+            <img src="Images\user.png" alt="Usuario" class="navbar-icon">
+          </a>
+          
         </div>
     </div>
   </nav>
@@ -97,39 +107,48 @@
     <div class="container">
       <h3>Paquetes Destacados</h3>
       <br>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
+      <div class="cards-slider">
           <div class="card custom-card" style="width: 18 rem;">
             <img src="https://mlz713kvh2ay.i.optimole.com/w:1000/h:750/q:mauto/ig:avif/https://alsurexpediciones.cl/wp-content/uploads/2017/08/kayak-petrohue-peulla.jpg" class="card-img-top" alt="Sur">
             <div class="card-body">
               <h4 class="card-title">Aventuras: Lagos y Volcanes</h4>
               <br>
-              <p class="card-text">Ven y descubre la magia del sur entre lagos cristalinos y montañas imponentes. Camina por senderos unicos, siente la energia de los vocanes y navega en aguas de un verde intenso que te dejaran sin aliento.</p>
+              <p class="card-text">Ven y descubre la magia del sur entre lagos cristalinos y montañas imponentes. 
+                Camina por senderos unicos, siente la energia de los vocanes y navega en aguas de un verde intenso
+                 que te dejaran sin aliento.</p>
               <br>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <div class="price-button">
+                <span class="price">Precio: $420 USD</span>
+                <a href="Detalle.html?id=1" class="btn btn-primary stretched-btn">Ver Más</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col">
           <div class="card custom-card" style="width: 18 rem;">
             <img src="https://pbs.twimg.com/media/DUeITt_X4AAXb1C.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h4 class="card-title">Encantos de Chiloe</h4>
               <br>
               <p class="card-text">Sumergete en la cultura y tradición de Chiloé. Plafitos de colores, mitos que viven en cada rincon y sabores que solo esta isla puede regalarte. Vive la esencia de un lugar donde el tiempo parece detenerse.</p>
+              <br>
+              <div class="price-button">
+                <span class="price">Precio: $380 USD</span>
+                <a href="Detalle.html?id=2" class="btn btn-primary stretched-btn">Ver Más</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col">
           <div class="card custom-card" style="width: 18 rem;">
             <img src="https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2023/11/06/interior-de-la-capilla-de-marmol-donde-se-muestra-el-lago-general-carrera-en-chile-1.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
               <h4 class="card-title">Secretos de la patagonia Norte</h4>
               <br>
               <p class="card-text">Atrévete a explorar la Patagonía como nunca antes. Descubre formaciones naturales únicas, Paisajes que parecen sacados de otro mundo y una naturaleza indomable que solo los verdaderos viajeros conocen.</p>
-            </div>
+              <br>
+              <div class="price-button">
+                <span class="price">Precio: $650 USD</span>
+                <a href="Detalle.html?id=3" class="btn btn-primary stretched-btn">Ver Más</a>
+              </div>
+              </div>
           </div>
-        </div>
       </div>
     </div>
   </section>
