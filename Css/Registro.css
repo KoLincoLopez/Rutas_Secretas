@@ -16,17 +16,17 @@ body {
   background: #fff;
 }
 
-/* Caja del registro */
+
 .registro-box {
   background: #fff;
-  padding: 15px;
+  padding: 30px;
   border-radius: 10px;
   width: 800px;        
   height: 560px;  
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Botón principal */
+
 .btn-primary {
   background-color: #0d47a1;
   border: none;

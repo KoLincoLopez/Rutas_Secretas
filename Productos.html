@@ -61,7 +61,7 @@
       <h3>Torres del Paine</h3>
       <p>Trekking y paisajes inolvidables.</p>
       <p><strong>$120.000 CLP</strong></p>
-      <button onclick="agregarCarrito('Torres del Paine')">Agregar al carrito</button>
+      <button onclick="agregarCarrito('Torres del Paine')">Reservar</button>
     </div>
 
     <div class="producto-card">
@@ -75,7 +75,7 @@
       <h3>Chiloé</h3>
       <p>Iglesias patrimoniales y gastronomía local.</p>
       <p><strong>$95.000 CLP</strong></p>
-      <button onclick="agregarCarrito('Chiloé')">Agregar al carrito</button>
+      <button onclick="agregarCarrito('Chiloé')">Reservar</button>
     </div>
 
     <div class="producto-card">
@@ -89,7 +89,7 @@
       <h3>Pucón</h3>
       <p>Volcanes, lagos y aventura.</p>
       <p><strong>$110.000 CLP</strong></p>
-      <button onclick="agregarCarrito('Pucón')">Agregar al carrito</button>
+      <button onclick="agregarCarrito('Pucón')">Reservar</button>
     </div>
 
     <div class="producto-card">
@@ -103,7 +103,7 @@
       <h3>Puerto Montt</h3>
       <p>Paisajes y cultura del sur.</p>
       <p><strong>$100.000 CLP</strong></p>
-      <button onclick="agregarCarrito('Puerto Montt')">Agregar al carrito</button>
+      <button onclick="agregarCarrito('Puerto Montt')">Reservar</button>
     </div>
   </div>
 
@@ -162,7 +162,7 @@
     startInterval();
   });
 
-  // Carrito
+ 
   function agregarCarrito(nombre) {
     const carrito = document.getElementById('carrito');
     carrito.textContent += `Has agregado: ${nombre}\n`;
