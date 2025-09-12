@@ -3,9 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Productos - Rutas Secretas</title>
+    <link rel="stylesheet" href="css/productos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="Images\logo_basic.png" alt="Rutas Secretas" class="logo me-2" style="height:50px;">
+        <span class="brand-text fs-4">Rutas Secretas</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tours</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Más
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Tours</a></li>
+                <li><a class="dropdown-item" href="#">Nosotros</a></li>
+                <li><a class="dropdown-item" href="Contactos.html">Contacto</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+  <main class="container mt-5 pt-5">
+  <h2 class="text-center mb-4"> Tours Turísticos</h2>
+
+  <div class="productos-grid">
     
+    <div class="producto-card">
+      <div class="slider">
+        <button class="prev">❮</button>
+        <img src="https://lastorres.com/content/uploads/header-torres-del-paine-parque-nacional-375x340-1.png" class="active">
+        <img src="https://torresdelpaine.com/wp-content/uploads/sites/6/2023/08/actividad-icehike-41-600x338.jpg">
+        <img src="https://torresdelpaine.com/wp-content/uploads/sites/6/2024/10/KayakGrey1-600x338.jpg">
+        <button class="next">❯</button>
+      </div>
+      <h3>Torres del Paine</h3>
+      <p>Trekking y paisajes inolvidables.</p>
+      <p><strong>$120.000 CLP</strong></p>
+      <button onclick="agregarCarrito('Torres del Paine')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto-card">
+      <div class="slider">
+        <button class="prev">❮</button>
+        <img src="https://www.gochile.cl/fotos/thumb2/75432-177739392@2x.jpg" class="active">
+        <img src="https://angelmotours.cl/wp-content/uploads/2016/05/chiloe-1030x687.jpg">
+        <img src="https://www.gochile.cl/fotos/full/108150-parque-nacional-chiloe-shutterstock-id44-mpo20az3bv4x3wqfjpiose7kj05nafsdkmbqe231rk.jpg">
+        <button class="next">❯</button>
+      </div>
+      <h3>Chiloé</h3>
+      <p>Iglesias patrimoniales y gastronomía local.</p>
+      <p><strong>$95.000 CLP</strong></p>
+      <button onclick="agregarCarrito('Chiloé')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto-card">
+      <div class="slider">
+        <button class="prev">❮</button>
+        <img src="https://www.gochile.cl/fotos/thumb2/105916-105722-chilevacaciones-region-de-los-lagos-img006@2x.jpg" class="active">
+        <img src="https://www.gochile.cl/fotos/thumb2/105915-105610-14700791_1254267347978399_2625816188240095663_o@2x.jpg">
+        <img src="https://www.gochile.cl/fotos/thumb2/107025-106906-turismo-anuncios-1805-1@2x.jpg">
+        <button class="next">❯</button>
+      </div>
+      <h3>Pucón</h3>
+      <p>Volcanes, lagos y aventura.</p>
+      <p><strong>$110.000 CLP</strong></p>
+      <button onclick="agregarCarrito('Pucón')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto-card">
+      <div class="slider">
+        <button class="prev">❮</button>
+        <img src="https://via.placeholder.com/350x200" class="active">
+        <img src="https://via.placeholder.com/350x200">
+        <img src="https://via.placeholder.com/350x200">
+        <button class="next">❯</button>
+      </div>
+      <h3>Puerto Montt</h3>
+      <p>Paisajes y cultura del sur.</p>
+      <p><strong>$100.000 CLP</strong></p>
+      <button onclick="agregarCarrito('Puerto Montt')">Agregar al carrito</button>
+    </div>
+  </div>
+
+  <h4 class="mt-4">Carrito:</h4>
+  <pre id="carrito"></pre>
+</main>
+
+
+<script>
+  // Slider automático + control con flechas
+  const sliders = document.querySelectorAll('.slider');
+
+  sliders.forEach(slider => {
+    const images = slider.querySelectorAll('img');
+    const prevBtn = slider.querySelector('.prev');
+    const nextBtn = slider.querySelector('.next');
+    let current = 0;
+    let interval;
+
+    function showImage(index) {
+      images.forEach(img => img.classList.remove('active'));
+      images[index].classList.add('active');
+    }
+
+    function nextImage() {
+      current = (current + 1) % images.length;
+      showImage(current);
+    }
+
+    function prevImage() {
+      current = (current - 1 + images.length) % images.length;
+      showImage(current);
+    }
+
+    // Flechas
+    nextBtn.addEventListener('click', () => {
+      nextImage();
+      resetInterval();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      prevImage();
+      resetInterval();
+    });
+
+    // Auto-play cada 3 segundos
+    function startInterval() {
+      interval = setInterval(nextImage, 3000);
+    }
+
+    function resetInterval() {
+      clearInterval(interval);
+      startInterval();
+    }
+
+    startInterval();
+  });
+
+  // Carrito
+  function agregarCarrito(nombre) {
+    const carrito = document.getElementById('carrito');
+    carrito.textContent += `Has agregado: ${nombre}\n`;
+  }
+</script>
+
 </body>
 </html>

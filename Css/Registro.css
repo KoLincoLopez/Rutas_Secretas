@@ -1,0 +1,40 @@
+
+body {
+  background: linear-gradient(135deg, #fff, #617b90);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-navbar {
+  background-color: #4a6a9a;
+}
+
+
+.card {
+  border-radius: 15px;
+  background: #fff;
+}
+
+/* Caja del registro */
+.registro-box {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  width: 800px;        
+  height: 560px;  
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón principal */
+.btn-primary {
+  background-color: #0d47a1;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2370c8;
+}
+
+
