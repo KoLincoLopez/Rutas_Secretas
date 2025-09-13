@@ -1,3 +1,17 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main{
+    flex: 1;
+    padding: 20px;
+}
+
 .custom-navbar {
     background-color: rgba(0, 0, 0, 0.3); 
   backdrop-filter: blur(6px); 
