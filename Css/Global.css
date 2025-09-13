@@ -1,3 +1,71 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main{
+    flex: 1;
+    padding: 20px;
+}
+
+.custom-navbar {
+    background-color: rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(6px); 
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-brand .brand-text {
+  font-size: 1.5rem; 
+  font-weight: 600;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem;         
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+}
+
+.brand-text {
+    font-size: 1.2rem; 
+    font-weight: bold;
+    line-height: 1;
+}
+
+.navbar-icon {
+  height: 30px;      
+  width: auto;       
+}
+
+.navbar-icon img {
+  height: 40px;      
+  width: auto;        
+}
+
+@media (max-width: 576px) {
+  .navbar-icon img{
+    height: 30px;   
+  }
+}
+
+.carousel-item img {
+    height: auto;   
+    width: 100%;     
+    max-height: 650px;
+    object-fit: cover;   
+}
+
 /*Footer*/
 .footer-simple{
     background-color: #141a41;
