@@ -46,43 +46,6 @@ body {
   background-color: #1565c0;
 }
 
-#carritoSection {
-    background-color: #fff8e1;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-#listaCarrito {
-    list-style: none;
-    padding: 0;
-}
-
-#listaCarrito li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #f1f1f1;
-    margin-bottom: 8px;
-    padding: 8px;
-    border-radius: 5px;
-}
-
-#listaCarrito button {
-    background-color: #d32f2f;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#listaCarrito button:hover {
-    background-color: #b71c1c;
-}
-
-
 
 
 /*Footer*/
