@@ -47,7 +47,7 @@
     </div>
   </nav>
   <main class="container mt-5 pt-5">
-  <h2 class="text-center mb-4"> Tours </h2>
+  <h2 class="text-center mb-4"> Nuestros Tours </h2>
 
   <div class="productos-grid">
     
@@ -60,7 +60,11 @@
         <button class="next">❯</button>
       </div>
       <h3>Torres del Paine</h3>
-      <p>Trekking y paisajes inolvidables.</p>
+      <p class="descripcion">
+        Descubre uno de los parques más famosos del mundo, con glaciares, montañas y fauna única. 
+        Este tour incluye transporte, guía especializado y entradas a los miradores más impresionantes.
+      </p>
+      
       <p><strong>$120.000 CLP</strong></p>
       <button onclick="agregarCarrito('Torres del Paine')">Reservar</button>
     </div>
@@ -74,7 +78,10 @@
         <button class="next">❯</button>
       </div>
       <h3>Chiloé</h3>
-      <p>Iglesias patrimoniales y gastronomía local.</p>
+      <p class="descripcion">
+        Vive la magia de Chiloé visitando iglesias patrimoniales, mercados artesanales y degustando la 
+        gastronomía típica. Una experiencia inolvidable en este rincón lleno de cultura y tradición.
+      </p>
       <p><strong>$95.000 CLP</strong></p>
       <button onclick="agregarCarrito('Chiloé')">Reservar</button>
     </div>
@@ -88,9 +95,75 @@
         <button class="next">❯</button>
       </div>
       <h3>Pucón</h3>
-      <p>Volcanes, lagos y aventura.</p>
+      <p class="descripcion">
+      Vive una jornada de aventura en Pucón con visitas a cascadas y finaliza relajándote en las Termas Geométricas rodeadas de naturaleza. Incluye transporte, guía y entradas.
+      </p>
       <p><strong>$110.000 CLP</strong></p>
       <button onclick="agregarCarrito('Pucón')">Reservar</button>
+    </div>
+
+    <div class="producto-card">
+      <div class="slider">
+        <button class="prev">❮</button>
+        <img src="https://via.placeholder.com/350x200" class="active">
+        <img src="https://via.placeholder.com/350x200">
+        <img src="https://via.placeholder.com/350x200">
+        <button class="next">❯</button>
+      </div>
+      <h3>Valdivia y Corral</h3>
+      <p class="descripcion">
+       Disfruta de la belleza de Valdivia recorriendo sus ríos, fuertes históricos y mercados costeros. Incluye un paseo en bote por la Bahía de Corral y degustación de cervezas artesanales locales.
+      </p>
+      <p><strong>$85.0000 CLP</strong></p>
+      <button onclick="agregarCarrito('Puerto Montt')">Reservar</button>
+    </div>
+
+    <div class="producto-card">
+      <div class="slider">
+        <button class="prev">❮</button>
+        <img src="https://via.placeholder.com/350x200" class="active">
+        <img src="https://via.placeholder.com/350x200">
+        <img src="https://via.placeholder.com/350x200">
+        <button class="next">❯</button>
+      </div>
+      <h3>Carretera Austral – Futaleufú</h3>
+      <p class="descripcion">
+      Explora una de las rutas más hermosas de Chile recorriendo ríos de aguas turquesas, glaciares y bosques prístinos. Ideal para quienes buscan contacto directo con la naturaleza y actividades como rafting.
+      </p>
+      <p><strong>$150.000 CLP</strong></p>
+      <button onclick="agregarCarrito('Puerto Montt')">Reservar</button>
+    </div>
+
+    <div class="producto-card">
+      <div class="slider">
+        <button class="prev">❮</button>
+        <img src="https://via.placeholder.com/350x200" class="active">
+        <img src="https://via.placeholder.com/350x200">
+        <img src="https://via.placeholder.com/350x200">
+        <button class="next">❯</button>
+      </div>
+      <h3>Puerto Varas y Saltos del Petrohué</h3>
+      <p class="descripcion">
+      Explora una de las rutas más hermosas de Chile recorriendo ríos de aguas turquesas, glaciares y bosques prístinos. Ideal para quienes buscan contacto directo con la naturaleza y actividades como rafting.
+      </p>
+      <p><strong>$100.000 CLP</strong></p>
+      <button onclick="agregarCarrito('Puerto Montt')">Reservar</button>
+    </div>
+
+    <div class="producto-card">
+      <div class="slider">
+        <button class="prev">❮</button>
+        <img src="https://via.placeholder.com/350x200" class="active">
+        <img src="https://via.placeholder.com/350x200">
+        <img src="https://via.placeholder.com/350x200">
+        <button class="next">❯</button>
+      </div>
+      <h3>Isla Magdalena – Punta Arenas</h3>
+      <p class="descripcion">
+      Navega por el estrecho de Magallanes para conocer la Isla Magdalena y observar la increíble colonia de pingüinos magallánicos en su hábitat natural.
+      </p>
+      <p><strong>$130.000 CLP</strong></p>
+      <button onclick="agregarCarrito('Puerto Montt')">Reservar</button>
     </div>
 
     <div class="producto-card">
@@ -108,8 +181,7 @@
     </div>
   </div>
 
-  <h4 class="mt-4">Carrito:</h4>
-  <pre id="carrito"></pre>
+  
 </main>
 
 <footer class="footer-simple">
@@ -131,7 +203,7 @@
 
 
 <script>
-  // Slider automático + control con flechas
+  
   const sliders = document.querySelectorAll('.slider');
 
   sliders.forEach(slider => {

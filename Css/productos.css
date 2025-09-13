@@ -25,33 +25,61 @@ body {
   background-color: #1565c0;
 }
 
+/* ====== CONTENEDOR DE PRODUCTOS ====== */
 .productos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 200px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Automático y responsivo */
+  gap: 30px; /* Espacio más compacto */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+/* ====== TARJETAS DE PRODUCTOS ====== */
 .producto-card {
   background: #fff;
   border-radius: 10px;
-  width: 600px;
-  padding: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 350px; /* Tarjetas más compactas */
+  margin: 0 auto;
+}
+
+.producto-card:hover {
+  transform: scale(1.03);
 }
 
 .producto-card h3 {
   margin: 10px 0;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
+.producto-card .descripcion {
+  font-size: 0.95rem;
+  color: #333;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
 
+.producto-card .precio {
+  font-weight: bold;
+  color: #000;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* ====== SLIDER ====== */
 .slider {
   position: relative;
-  width: 500px;
-  height: 300px;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
   overflow: hidden;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -62,7 +90,7 @@ body {
   height: 100%;
   object-fit: cover;
   display: none;
-  transition: opacity 0.10s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .slider img.active {
@@ -76,7 +104,7 @@ body {
   background: rgba(0,0,0,0.5);
   color: #fff;
   border: none;
-  padding: 10px;
+  padding: 8px;
   cursor: pointer;
   border-radius: 50%;
 }
@@ -89,18 +117,32 @@ body {
   right: 10px;
 }
 
+/* ====== BOTÓN ====== */
 button {
-  margin-top: 10px;
-  padding: 10px 15px;
+  padding: 8px 15px;
   background-color: #0d47a1;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease-in-out;
 }
 
 button:hover {
   background-color: #1565c0;
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 768px) {
+  .productos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .producto-card {
+    max-width: 100%;
+  }
 }
 
 /*Footer*/
