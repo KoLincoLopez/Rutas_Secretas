@@ -1,9 +1,9 @@
 const productos = {
-      1: {
-        titulo: "Aventuras: Lagos y Volcanes",
-        imagen: "https://mlz713kvh2ay.i.optimole.com/w:1000/h:750/q:mauto/ig:avif/https://alsurexpediciones.cl/wp-content/uploads/2017/08/kayak-petrohue-peulla.jpg",
-        descripcion: 
-         `
+  1: {
+    titulo: "Aventuras: Lagos y Volcanes",
+    imagen: "https://mlz713kvh2ay.i.optimole.com/w:1000/h:750/q:mauto/ig:avif/https://alsurexpediciones.cl/wp-content/uploads/2017/08/kayak-petrohue-peulla.jpg",
+    descripcion:
+      `
             <p>Vive la postal más icónica del sur de Chile. Lagos de azul cristalino, volcanes nevados y bosques verdes que parecen sacados de cuento. Una experiencia para quienes buscan aventura con la comodidad de un viaje bien organizado.</p>
             <h5>Incluye:</h5>
             <ul>
@@ -18,12 +18,12 @@ const productos = {
             <p><strong>Duración:</strong> 3 días / 2 noches<br>
             <strong>Precio referencial:</strong> USD $420 por persona</p>
         `
-      },
-      2: {
-        titulo: "Encantos de Chiloé",
-        imagen: "https://pbs.twimg.com/media/DUeITt_X4AAXb1C.jpg",
-        descripcion: 
-        `
+  },
+  2: {
+    titulo: "Encantos de Chiloé",
+    imagen: "https://pbs.twimg.com/media/DUeITt_X4AAXb1C.jpg",
+    descripcion:
+      `
             <p>Sumergete en la isla de las leyendas y tradiciones vivas. Descubre su cultura única, 
             sus paisajes marinos y la calidez de su gente. Un viaje donde la historia, la gastronomia y
             la naturaleza se entrelazan</p>
@@ -41,12 +41,12 @@ const productos = {
             <p><strong>Duración:</strong> 3 días / 2 noches<br>
             <strong>Precio referencial:</strong> USD $380 por persona</p>
         `
-      },
-      3: {
-        titulo: "Secretos de la Patagonia Norte",
-        imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2023/11/06/interior-de-la-capilla-de-marmol-donde-se-muestra-el-lago-general-carrera-en-chile-1.jpeg",
-        descripcion: 
-        `
+  },
+  3: {
+    titulo: "Secretos de la Patagonia Norte",
+    imagen: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2023/11/06/interior-de-la-capilla-de-marmol-donde-se-muestra-el-lago-general-carrera-en-chile-1.jpeg",
+    descripcion:
+      `
             <p>Explora paisajes que parecen de otro planeta. Cuevas de marmol, aguas turquesa y montañas infinitas.
             Un viaje para quienes buscan comodidad sin perder el contacto con la fuerza salvaje de la patagonia</p>
             <h5>Incluye:</h5>
@@ -62,17 +62,45 @@ const productos = {
             </ul>
             <p><strong>Duración:</strong> 4 días / 3 noches<br>
             <strong>Precio referencial:</strong> USD $650 por persona</p>
-        `     
-        }
-    };
+        `
+  }
+};
 
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get("id");
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
 
-    if (productos[id]) {
-      document.getElementById("titulo").innerText = productos[id].titulo;
-      document.getElementById("imagen").src = productos[id].imagen;
-      document.getElementById("descripcion").innerHTML = productos[id].descripcion;
-    } else {
-      document.getElementById("detalleProducto").innerHTML = "<p>Producto no encontrado.</p>";
-    }
+if (productos[id]) {
+  document.getElementById("titulo").innerText = productos[id].titulo;
+  document.getElementById("imagen").src = productos[id].imagen;
+  document.getElementById("descripcion").innerHTML = productos[id].descripcion;
+} else {
+  document.getElementById("detalleProducto").innerHTML = "<p>Producto no encontrado.</p>";
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btnAgregarCarrito = document.getElementById("btnAgregarCarrito");
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  if (!btnAgregarCarrito || !id) return;
+
+  const producto = productos[id];
+  if (!producto) return;
+
+  btnAgregarCarrito.addEventListener("click", () => {
+    const precioMatch = producto.descripcion.match(/USD \$\d+/);
+    const precio = precioMatch ? parseInt(precioMatch[0].replace("USD $", "")) : 0;
+
+    agregarCarrito(producto.titulo, precio, producto.imagen);
+    mostrarToastCarrito();
+  });
+});
+function mostrarToastCarrito() {
+  const toast = document.getElementById('toast-carrito');
+  toast.classList.add('show');
+
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2000);
+}

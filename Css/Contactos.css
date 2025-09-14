@@ -5,11 +5,14 @@ body {
   padding: 0;
 }
 
-
-.custom-navbar {
-  background-color: #4a6a9a;
+main {
+  flex: 1;
+  padding: 80px 20px 20px; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 60px);
 }
-
 
 .card {
   border-radius: 15px;
@@ -34,4 +37,5 @@ body {
   width: 700px;        
   min-height: 400px;   
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
 }
