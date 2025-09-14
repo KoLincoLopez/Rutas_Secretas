@@ -1,27 +1,37 @@
 
 body {
-  background: linear-gradient(135deg, #fff, #617b90);
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
+<<<<<<< HEAD
+=======
+
+.custom-navbar {
+  background-color: #4a6a9a;
+}
+
+
+
+>>>>>>> c32c1516dfa0e24c37d6d658f27faace60c875dc
 .card {
   border-radius: 15px;
   background: #fff;
 }
 
-/* Caja del registro */
+
 .registro-box {
   background: #fff;
-  padding: 15px;
+  padding: 30px;
   border-radius: 10px;
   width: 800px;        
   height: 560px;  
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Botón principal */
+
 .btn-primary {
   background-color: #0d47a1;
   border: none;
@@ -31,5 +41,53 @@ body {
 .btn-primary:hover {
   background-color: #2370c8;
 }
+
+/*Footer*/
+.footer-simple{
+    background-color: #141a41;
+    color: #fff;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+.footer-top{
+    margin-bottom: 10px;
+}
+
+.footer-logo{
+    width: 120px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.footer-slogan{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.footer-bottom{
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
+
+.footer-nav a{
+    color: #ccc; 
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover{
+    color:#ffffff;
+    text-decoration: underline;
+}
+
+.footer-copy{
+    margin: 10px;
+    font-size: 0.9em;
+    color: #aaa;
+    padding: 0;
+} 
 
 

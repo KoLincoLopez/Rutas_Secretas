@@ -5,14 +5,30 @@ body {
   padding: 0;
 }
 
-main {
-  flex: 1;
-  padding: 80px 20px 20px; 
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: calc(100vh - 60px);
+
+.custom-navbar {
+  background-color: #4a6a9a;
 }
+
+.reserva-box { 
+    min-height:  600px;
+    min-width: 600px; 
+    margin: 0 auto; 
+    background: #f7f7f7; 
+    padding: 50px; 
+    border-radius: 20px;
+}
+
+.resumen { 
+    margin-top: 20px; 
+    padding: 10px; 
+    background: #e3f2fd;
+    border-radius: 8px; }
+
+.custom-navbar {
+  background-color: #4a6a9a;
+}
+
 
 .card {
   border-radius: 15px;
@@ -30,18 +46,7 @@ main {
   background-color: #1565c0;
 }
 
-.contact-box {
-  background: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  width: 700px;        
-  min-height: 400px;   
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-<<<<<<< HEAD
-  margin: 0 auto;
-}
-=======
-}
+
 
 /*Footer*/
 .footer-simple{
@@ -90,4 +95,3 @@ main {
     color: #aaa;
     padding: 0;
 } 
->>>>>>> c32c1516dfa0e24c37d6d658f27faace60c875dc
