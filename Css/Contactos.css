@@ -39,3 +39,24 @@ main {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
 }
+
+.toast-success {
+  position: fixed;
+  top: 120px;               
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #155724; 
+  color: white;
+  padding: 14px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 1055;
+}
+
+.toast-success.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

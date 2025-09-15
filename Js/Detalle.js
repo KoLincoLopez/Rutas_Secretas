@@ -16,7 +16,7 @@ const productos = {
                 <li>Guía bilingüe (español/inglés)</li>
             </ul>
             <p><strong>Duración:</strong> 3 días / 2 noches<br>
-            <strong>Precio referencial:</strong> USD $420 por persona</p>
+            <strong>Precio referencial:</strong>$399.835 por persona</p>
         `
   },
   2: {
@@ -39,7 +39,7 @@ const productos = {
                 <li>Guia bilingue (español/ingles)</li>
             </ul>
             <p><strong>Duración:</strong> 3 días / 2 noches<br>
-            <strong>Precio referencial:</strong> USD $380 por persona</p>
+            <strong>Precio referencial:</strong> $361.756 por persona</p>
         `
   },
   3: {
@@ -61,7 +61,7 @@ const productos = {
                 <li>Equipo basico para trekking (Bastones, linternas frontale)</li>
             </ul>
             <p><strong>Duración:</strong> 4 días / 3 noches<br>
-            <strong>Precio referencial:</strong> USD $650 por persona</p>
+            <strong>Precio referencial:</strong>$618.793 por persona</p>
         `
   }
 };
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   btnAgregarCarrito.addEventListener("click", () => {
     const precioMatch = producto.descripcion.match(/USD \$\d+/);
-    const precio = precioMatch ? parseInt(precioMatch[0].replace("USD $", "")) : 0;
+    const precio = precioMatch ? parseInt(precioMatch[0].replace("CLP $", "")) : 0;
 
     agregarCarrito(producto.titulo, precio, producto.imagen);
     mostrarToastCarrito();

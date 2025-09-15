@@ -39,6 +39,20 @@ loginForm.addEventListener("submit", function (e) {
   }
 
   if (isValid) {
-    alert("Formulario válido, enviando datos...");
+    let msg = document.querySelector(".login-msg");
+
+    if (!msg) {
+      msg = document.createElement("div");
+      msg.className = "login-msg";
+      document.body.appendChild(msg);
+    }
+
+    msg.textContent = "¡Inicio de sesión exitoso!";
+    msg.style.display = "block";
+
+    setTimeout(() => {
+      msg.style.display = "none";
+    }, 3000);
+
   }
 });
