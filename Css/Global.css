@@ -96,32 +96,32 @@
     background-color: #141a41;
     color: #fff;
     text-align: center;
-    padding: 20px 15px;
+    padding: 0px 15px;
 }
 
 .footer-top{
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 .footer-logo{
-    width: 120px;
-    margin-bottom: 10px;
+    width: 100px;
+    margin-bottom: 6px;
     padding: 0;
 }
 
 .footer-slogan{
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
 }
 
 .footer-bottom{
     border-top: 1px solid #444;
-    padding-top: 15px;
+    padding-top: 8px;
 }
 
 .footer-nav a{
     color: #ccc; 
-    margin: 0 12px;
+    margin: 0 8px;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -133,13 +133,12 @@
 }
 
 .footer-copy{
-    margin: 10px;
-    font-size: 0.9em;
+    margin: 6px 0 0 0;
+    font-size: 0.85em;
     color: #aaa;
     padding: 0;
 } 
 
-/* Badge del carrito (mini-bubble junto al texto) */
 .cart-count {
   font-size: 0.75rem;          
   font-weight: bold;
