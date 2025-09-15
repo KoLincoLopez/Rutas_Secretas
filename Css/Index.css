@@ -15,11 +15,12 @@ main {
     height: 80vh;
 }
 
-.carousel-inner{
+.carousel-inner {
     height: 100%;
 }
-.carousel-item{
-    height: 100%; 
+
+.carousel-item {
+    height: 100%;
 }
 
 .carousel-item img {

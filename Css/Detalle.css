@@ -3,7 +3,7 @@ body, html {
 }
 
 .container.py-5 {
-  padding-top: 80px; /* ajusta según la altura del navbar */
+  padding-top: 80px; 
 }
 
 
@@ -26,7 +26,7 @@ body, html {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #4947e3;
+  background-color: #244f86;
   color: white;
   padding: 12px 20px;
   border-radius: 10px;

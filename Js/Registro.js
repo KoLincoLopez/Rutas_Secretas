@@ -9,14 +9,12 @@
     const emailError = document.getElementById('emailError');
     const nombreInput = document.getElementById('nombres');
 
-    // Mostrar / ocultar contraseñas
     showPassword.addEventListener('change', function() {
       const type = this.checked ? 'text' : 'password';
       password.type = type;
       confirmar.type = type;
     });
 
-    // Validación en tiempo real (opcional, para mejor UX)
     password.addEventListener('input', function() {
       passwordError.style.display = 'none';
       password.classList.remove('error');
@@ -42,17 +40,13 @@
       emailInput.classList.remove('error');
     });
 
-    // Función simple para validar email
     function validarEmail(email) {
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return re.test(email);
     }
 
-    // Manejo del envío del formulario
     form.addEventListener('submit', function(e) {
-      e.preventDefault(); // siempre controlamos el submit por JS
-
-      // limpiar errores previos
+      e.preventDefault(); 
       passwordError.style.display = 'none';
       confirmError.style.display = 'none';
       emailError.style.display = 'none';
@@ -65,7 +59,6 @@
       const email = emailInput.value.trim();
       const nombre = nombreInput.value.trim();
 
-      // Validaciones
       if (!validarEmail(email)) {
         emailError.textContent = 'Introduce un correo válido.';
         emailError.style.display = 'block';
@@ -90,10 +83,8 @@
         return;
       }
 
-      // Guardar usuario en localStorage (array "usuarios")
       const usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
 
-      // Comprobar email duplicado
       const existe = usuarios.some(u => u.email && u.email.toLowerCase() === email.toLowerCase());
       if (existe) {
         emailError.textContent = 'El correo ya está registrado.';
@@ -103,7 +94,6 @@
         return;
       }
 
-      // Crear objeto usuario (puedes añadir más campos si quieres)
       const nuevoUsuario = {
         nombre: nombre || '',
         email: email,
@@ -114,7 +104,6 @@
       usuarios.push(nuevoUsuario);
       localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
-      // Éxito
       alert('Registro exitoso. Ya puedes iniciar sesión.');
       form.reset();
     });
