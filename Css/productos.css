@@ -1,13 +1,8 @@
 body {
-  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  background: white;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-}
-
-
-.custom-navbar {
-  background-color: #4a6a9a;
 }
 
 .card {
@@ -25,17 +20,15 @@ body {
   background-color: #1565c0;
 }
 
-/* ====== CONTENEDOR DE PRODUCTOS ====== */
 .productos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Automático y responsivo */
-  gap: 30px; /* Espacio más compacto */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px; 
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* ====== TARJETAS DE PRODUCTOS ====== */
 .producto-card {
   background: #fff;
   border-radius: 10px;
@@ -45,7 +38,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 350px; /* Tarjetas más compactas */
+  max-width: 350px; 
   margin: 0 auto;
 }
 
@@ -74,7 +67,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* ====== SLIDER ====== */
 .slider {
   position: relative;
   width: 100%;
@@ -117,7 +109,6 @@ body {
   right: 10px;
 }
 
-/* ====== BOTÓN ====== */
 button {
   padding: 8px 15px;
   background-color: #0d47a1;
@@ -133,7 +124,6 @@ button:hover {
   background-color: #1565c0;
 }
 
-/* ====== RESPONSIVO ====== */
 @media (max-width: 768px) {
   .productos-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -145,51 +135,24 @@ button:hover {
   }
 }
 
-/*Footer*/
-.footer-simple{
-    background-color: #141a41;
-    color: #fff;
-    text-align: center;
-    padding: 20px 15px;
+.toast-carrito {
+  position: fixed;
+  top: 80px; 
+  right: 20px;
+  background-color: #0d47a1; 
+  color: #fff; 
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1055;
 }
 
-.footer-top{
-    margin-bottom: 10px;
+.toast-carrito.show {
+  opacity: 1;
 }
 
-.footer-logo{
-    width: 120px;
-    margin-bottom: 10px;
-    padding: 0;
-}
 
-.footer-slogan{
-    font-size: 1.2em;
-    font-weight: bold;
-}
 
-.footer-bottom{
-    border-top: 1px solid #444;
-    padding-top: 15px;
-}
-
-.footer-nav a{
-    color: #ccc; 
-    margin: 0 12px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.footer-nav a:hover{
-    color:#ffffff;
-    text-decoration: underline;
-}
-
-.footer-copy{
-    margin: 10px;
-    font-size: 0.9em;
-    color: #aaa;
-    padding: 0;
-} 
 
