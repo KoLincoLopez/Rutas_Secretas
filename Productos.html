@@ -47,29 +47,26 @@
     </div>
   </nav>
   <main class="container mt-5 pt-5">
-  <h2 class="text-center mb-4"> Nuestros Tours </h2>
-
-  <div class="productos-grid">
-    
-    <div class="producto-card">
-      <div class="slider">
-        <button class="prev">❮</button>
-        <img src="https://lastorres.com/content/uploads/header-torres-del-paine-parque-nacional-375x340-1.png" class="active">
-        <img src="https://torresdelpaine.com/wp-content/uploads/sites/6/2023/08/actividad-icehike-41-600x338.jpg">
-        <img src="https://torresdelpaine.com/wp-content/uploads/sites/6/2024/10/KayakGrey1-600x338.jpg">
-        <button class="next">❯</button>
+    <h2 class="text-center mb-4"> Nuestros Tours </h2>
+    <div class="productos-grid">
+      <div class="producto-card">
+        <div class="slider">
+          <button class="prev">❮</button>
+          <img src="https://lastorres.com/content/uploads/header-torres-del-paine-parque-nacional-375x340-1.png" class="active">
+          <img src="https://torresdelpaine.com/wp-content/uploads/sites/6/2023/08/actividad-icehike-41-600x338.jpg">
+          <img src="https://torresdelpaine.com/wp-content/uploads/sites/6/2024/10/KayakGrey1-600x338.jpg">
+          <button class="next">❯</button>
+        </div>
+        <h3>Torres del Paine</h3>
+        <p class="descripcion">
+          Descubre uno de los parques más famosos del mundo, con glaciares, montañas y fauna única. 
+          Este tour incluye transporte, guía especializado y entradas a los miradores más impresionantes.
+        </p>
+        <p><strong>$120.000 CLP</strong></p>
+        <button onclick="agregarCarrito('Torres del Paine')">Agregar al carrito</button>
       </div>
-      <h3>Torres del Paine</h3>
-      <p class="descripcion">
-        Descubre uno de los parques más famosos del mundo, con glaciares, montañas y fauna única. 
-        Este tour incluye transporte, guía especializado y entradas a los miradores más impresionantes.
-      </p>
-      
-      <p><strong>$120.000 CLP</strong></p>
-      <button onclick="agregarCarrito('Torres del Paine')">Reservar</button>
-    </div>
 
-    <div class="producto-card">
+      <div class="producto-card">
       <div class="slider">
         <button class="prev">❮</button>
         <img src="https://www.gochile.cl/fotos/thumb2/75432-177739392@2x.jpg" class="active">
@@ -83,7 +80,7 @@
         gastronomía típica. Una experiencia inolvidable en este rincón lleno de cultura y tradición.
       </p>
       <p><strong>$95.000 CLP</strong></p>
-      <button onclick="agregarCarrito('Chiloé')">Reservar</button>
+      <button onclick="agregarCarrito('Chiloé')">Agregar al carrito</button>
     </div>
 
     <div class="producto-card">
@@ -99,7 +96,7 @@
       Vive una jornada de aventura en Pucón con visitas a cascadas y finaliza relajándote en las Termas Geométricas rodeadas de naturaleza. Incluye transporte, guía y entradas.
       </p>
       <p><strong>$110.000 CLP</strong></p>
-      <button onclick="agregarCarrito('Pucón')">Reservar</button>
+      <button onclick="agregarCarrito('Pucón')">Agregar al carrito</button>
     </div>
 
     <div class="producto-card">
@@ -116,7 +113,7 @@
        Disfruta de la belleza de Valdivia recorriendo sus ríos, fuertes históricos y mercados costeros. Incluye un paseo en bote por la Bahía de Corral y degustación de cervezas artesanales locales.
       </p>
       <p><strong>$85.0000 CLP</strong></p>
-      <button onclick="agregarCarrito('Puerto Montt')">Reservar</button>
+      <button onclick="agregarCarrito('Valdivia y Corral')">Agregar al carrito</button>
     </div>
 
     <div class="producto-card">
@@ -132,7 +129,7 @@
       Explora una de las rutas más hermosas de Chile recorriendo ríos de aguas turquesas, glaciares y bosques prístinos. Ideal para quienes buscan contacto directo con la naturaleza y actividades como rafting.
       </p>
       <p><strong>$150.000 CLP</strong></p>
-      <button onclick="agregarCarrito('Puerto Montt')">Reservar</button>
+      <button onclick="agregarCarrito('Carretera Austral – Futaleufú')">Agregar al carrito</button>
     </div>
 
     <div class="producto-card">
@@ -148,7 +145,7 @@
       Explora una de las rutas más hermosas de Chile recorriendo ríos de aguas turquesas, glaciares y bosques prístinos. Ideal para quienes buscan contacto directo con la naturaleza y actividades como rafting.
       </p>
       <p><strong>$100.000 CLP</strong></p>
-      <button onclick="agregarCarrito('Puerto Montt')">Reservar</button>
+      <button onclick="agregarCarrito('Puerto Varas y Saltos del Petrohué')">Agregar al carrito</button>
     </div>
 
     <div class="producto-card">
@@ -164,7 +161,7 @@
       Navega por el estrecho de Magallanes para conocer la Isla Magdalena y observar la increíble colonia de pingüinos magallánicos en su hábitat natural.
       </p>
       <p><strong>$130.000 CLP</strong></p>
-      <button onclick="agregarCarrito('Puerto Montt')">Reservar</button>
+      <button onclick="agregarCarrito('Isla Magdalena – Punta Arenas')">Agregar al carrito</button>
     </div>
 
     <div class="producto-card">
@@ -181,7 +178,7 @@
     Incluye transporte, guía y tiempo libre para fotografías y exploración.
     </p>
     <p class="precio"><strong>$95.000 CLP</strong></p>
-    <button>Reservar</button>
+    <button onclick="agregarCarrito('Volcán Osorno y Lago Todos los Santos')">Agregar al carrito</button>
     </div>
 
     <div class="producto-card">
@@ -198,7 +195,7 @@
     Una experiencia perfecta para los amantes del trekking y la naturaleza.
     </p>
     <p class="precio"><strong>$60.000 CLP</strong></p>
-    <button>Reservar</button>
+    <button onclick="agregarCarrito('Parque Nacional Huerquehue')">Agregar al carrito</button>
     </div>
 
 
@@ -217,7 +214,7 @@
        Disfruta de un atardecer inolvidable con vistas espectaculares y transporte incluido.
       </p>
       <p><strong>$150.000 CLP</strong></p>
-      <button onclick="agregarCarrito('Puerto Montt')">Reservar</button>
+      <button onclick="agregarCarrito('San Pedro de Atacama y Valle de la Luna')">Agregar al carrito</button>
     </div>
 
     <div class="producto-card">
@@ -233,7 +230,7 @@
     Disfruta de una noche bajo uno de los cielos más despejados del mundo, observando estrellas y planetas con telescopios profesionales y guía astrónomo.
     </p>
     <p class="precio"><strong>$65.000 CLP</strong></p>
-    <button>Reservar</button>
+    <button onclick="agregarCarrito('Observación Astronómica en Atacama')">Agregar al carrito</button>
     </div>
 
     <div class="producto-card">
@@ -249,7 +246,7 @@
     Recorre la ciudad de Iquique, su historia salitrera y relájate en las aguas termales naturales de Pica. Incluye transporte y guía turístico.
     </p>
     <p class="precio"><strong>$70.000 CLP</strong></p>
-    <button>Reservar</button>
+    <button onclick="agregarCarrito('Iquique y Oasis de Pica')">Agregar al carrito</button>
     </div>
 
     <div class="producto-card">
@@ -265,7 +262,7 @@
     Descubre uno de los íconos del norte de Chile: la Mano del Desierto. El tour también incluye visita a la ciudad de Calama y sus alrededores.
     </p>
     <p class="precio"><strong>$55.000 CLP</strong></p>
-    <button>Reservar</button>
+    <button onclick="agregarCarrito('Mano del Desierto y calama')">Agregar al carrito</button>
     </div>
     
    <div class="producto-card">
@@ -282,7 +279,7 @@
     Disfruta de un día completo de cultura, naturaleza y gastronomía local.
   </p>
   <p class="precio"><strong>$85.000 CLP</strong></p>
-  <button>Reservar</button>
+  <button onclick="agregarCarrito('Valle del Elqui')">Agregar al carrito</button>
   </div>
   <div class="producto-card">
   <div class="slider">
@@ -297,7 +294,7 @@
     El recorrido incluye paradas en miradores, paseo por el centro histórico de Antofagasta y tiempo libre para fotografías espectaculares.
   </p>
   <p class="precio"><strong>$50.000 CLP</strong></p>
-  <button>Reservar</button>
+  <button onclick="agregarCarrito('La portada de Antofagasta')">Agregar al carrito</button>
   </div>
 
   <div class="producto-card">
@@ -313,7 +310,7 @@
     Disfruta de caminatas por senderos naturales, avistamiento de pingüinos de Humboldt y playas únicas.
   </p>
   <p class="precio"><strong>$90.000 CLP</strong></p>
-  <button>Reservar</button>
+  <button onclick="agregarCarrito('Parque Nacional Pan de Azúcar')">Agregar al carrito</button>>
   </div>
 
   <div class="producto-card">
@@ -328,7 +325,7 @@
     Ideal para los amantes de la aventura y la fotografía.
   </p>
   <p class="precio"><strong>$75.000 CLP</strong></p>
-  <button>Reservar</button>
+  <button onclick="agregarCarrito('valle de la muerte')">Agregar al carrito</button>
 
   
 </main>
