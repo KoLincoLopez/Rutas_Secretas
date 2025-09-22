@@ -94,6 +94,18 @@
     transition: background-color 0.3s ease;
 }
 
+#Pagar{
+    background-color: #2536a3; 
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 8px;
+    transition: background-color 0.3s ease; 
+    width: 10%;  
+}
+
 @media (max-width: 768px) {
     #listaCarrito li {
         max-width: 100%;

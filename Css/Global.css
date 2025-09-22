@@ -17,22 +17,9 @@
   font-weight: 600;
 }
 
-.navbar-brand {
-    display: flex;
-    align-items: center; 
-    gap: 0.5rem;         
-}
-
-.navbar-brand img {
-    height: 50px;
-    width: auto;
-}
-
-.brand-text {
-    font-size: 1.2rem; 
-    font-weight: bold;
-    line-height: 1;
-}
+.navbar-brand {display: flex; align-items: center; gap: 0.5rem;         }
+.navbar-brand img {height: 50px; width: auto;}
+.brand-text {font-size: 1.2rem; font-weight: bold; line-height: 1;}
 
 .navbar-icon {
   height: 30px;      
