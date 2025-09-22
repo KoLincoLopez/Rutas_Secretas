@@ -12,13 +12,62 @@
 </head>
 
 <body>
-    <section id="carritoSection">
-      <h2>🛒 Carrito de Compras</h2>
-      <ul id="listaCarrito"></ul>
-      <p><strong>Total:</strong> $<span id="total">0</span> CLP</p>
-      <button onclick="vaciarCarrito()">Vaciar Carrito</button>
-</section>
-    
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="Productos.html">
+        <img src="Images/logo_basic.png" alt="Rutas Secretas" class="logo me-2" style="height:50px;">
+        <span class="brand-text fs-4">Volver</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="Index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="Productos.html">Tours</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Más
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Contactos.html">Contacto</a></li>
+              <li><a class="dropdown-item" href="Blogs.html">Blogs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="d-flex align-items-center ms-lg-auto mt-2 mt-lg-0">
+        <a href="Carrito.html" class="me-2">Carrito</a>
+        <a href="Login.html" class="ms-2">Iniciar Sesión</a>
+      </div>
+    </div>
+    </div>
+  </nav>
+  <br><br>
+  <main class="container mt-5 pt-5">
+    <div class="container-fluid">
+      <h2 id="carrito-titulo" class="text-center mb-4">Tu Carrito</h2>
+      <div class="row" id="carrito-lista"></div>
+      <div class="mt-4 text-end">
+        <h4>Total: $<span id="carrito-total">0</span></h4>
+        <button id="vaciar-carrito">Vaciar Carrito</button>
+      </div>
+    </div>
+  </main>
+  <br><br><br>
+  
+  <script src="Js/Carrito.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
