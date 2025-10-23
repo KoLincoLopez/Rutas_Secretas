@@ -104,3 +104,14 @@ function mostrarToastCarrito() {
     toast.classList.remove('show');
   }, 2000);
 }
+
+window.addEventListener("scroll", function() {
+  const navbar = document.querySelector(".custom-navbar");
+  if (!navbar) return; // evita errores si no existe
+
+  if (window.scrollY > 20) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});

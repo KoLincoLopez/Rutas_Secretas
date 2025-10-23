@@ -8,7 +8,6 @@ body {
 
 main {
     flex: 1;
-
 }
 
 #carouselExampleCaptions {
@@ -30,9 +29,29 @@ main {
     display: block;
 }
 
+.carousel-caption{
+    position: absolute !important;
+    bottom: 20px !important; 
+    left: 0 !important; 
+    transform: none !important; 
+    width: 100% !important; 
+    max-width: none !important; 
+    background-color: rgba(0, 0, 0, 0.471) !important; 
+    padding: 20px 50px !important;
+    border-radius: 0px !important;
+    text-align: center;
+    color: white;
+}
+
 @media (max-width: 768px) {
     .carousel-caption {
-        top: 80px;
+        bottom: 20px !important;
+        font-size: 0.9rem; 
+        padding: 5px 20px !important; 
+        width: 100% !important; 
+        left: 50% !important; 
+        transform: translateX(-50%) !important; 
+        font-size: 0.9rem;
     }
 }
 
