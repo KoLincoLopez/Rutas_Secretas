@@ -11,18 +11,47 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark fixed-top custom-navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="Index.html">
-                <img src="Images/logo_basic.png" alt="Rutas Secretas" class="logo me-2" style="height:50px;">
-                <span class="brand-text fs-4 fw-bold">Volver</span>
-            </a>
+   <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="Index.html">
+        <img src="Images/logo_basic.png" alt="Rutas Secretas" class="navbar-logo me-2">
+        <span class="brand-text fs-4">Rutas Secretas</span>
+      </a>
 
-            <div class="d-flex align-items-center ms-lg-auto mt-2 mt-lg-0">
-                <a href="Carrito.html" class="me-2">Carrito</a>
-            </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="Index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="Productos.html">Tours</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Más
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Contactos.html">Contacto</a></li>
+              <li><a class="dropdown-item" href="Blogs.html">Blogs</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="navbar-right d-flex align-items-center">
+          <a href="Carrito.html" class="nav-btn">Carrito</a>
+          <a href="Login.html" class="nav-btn highlight ms-2">Iniciar Sesión</a>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
     
     <br><br><br><br>
     <div class="container py-5">

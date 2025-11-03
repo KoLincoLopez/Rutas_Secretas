@@ -18,9 +18,12 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: #fff;
+    color: #cacaca;
 }
 
+.navbar-brand:hover {
+    color: #ffffff; 
+}
 .navbar-logo {
     height: 60px;
 }
@@ -170,11 +173,11 @@
         padding: 10px 25px;
     }
 
-    .navbar-right .nav-btn{
+    .navbar-right .nav-btn {
         border-radius: 30px;
     }
 
-    .navbar-right .nav-btn:hover{
+    .navbar-right .nav-btn:hover {
         transform: scale(1.05);
     }
 
@@ -252,11 +255,11 @@
     background-color: #141a41;
     color: #fff;
     text-align: center;
-    padding: 0px 15px;
+    padding: 40px 15px;
 }
 
 .footer-top {
-    margin-bottom: 6px;
+    margin-bottom: 16px;
 }
 
 .footer-logo {

@@ -70,22 +70,22 @@
           const div = document.createElement('div');
           div.className = 'col-12 col-md-4 mb-3';
           div.innerHTML = `
-            <div class="card h-100">
-              <img src="${p.img || 'https://via.placeholder.com/600x400'}" class="card-img-top" alt="${p.nombre}" style="height:200px; object-fit:cover;">
-              <div class="card-body">
-                <h5 class="card-title">${p.nombre}</h5>
-                <p class="card-text">
-                  Cantidad:
-                  <button class="btn btn-sm btn-outline-secondary" onclick="cambiarCantidad(${i}, -1)">-</button>
-                  ${cantidad}
-                  <button class="btn btn-sm btn-outline-secondary" onclick="cambiarCantidad(${i}, 1)">+</button>
-                </p>
-                <p class="card-text">Precio unitario: $${precioNum.toLocaleString('es-CL')}</p>
-                <p class="card-text">Subtotal: $${subtotal.toLocaleString('es-CL')}</p>
-                <button class="btn btn-sm btn-danger mt-2" onclick="eliminarItem(${i})">Eliminar Todo</button>
-              </div>
-            </div>
-          `;
+                        <div class="card h-100">
+                          <img src="${p.img || 'https://via.placeholder.com/600x400'}" class="card-img-top" alt="${p.nombre}" style="height:200px; object-fit:cover;">
+                          <div class="card-body">
+                            <h5 class="card-title">${p.nombre}</h5>
+                            <p class="card-text">
+                              Cantidad:
+                              <button class="btn btn-sm btn-outline-secondary" onclick="cambiarCantidad(${i}, -1)">-</button>
+                              ${cantidad}
+                              <button class="btn btn-sm btn-outline-secondary" onclick="cambiarCantidad(${i}, 1)">+</button>
+                            </p>
+                            <p class="card-text">Precio unitario: $${precioNum.toLocaleString('es-CL')}</p>
+                            <p class="card-text">Subtotal: $${subtotal.toLocaleString('es-CL')}</p>
+                            <button class="btn btn-sm btn-danger mt-2" onclick="eliminarItem(${i})">Eliminar Todo</button>
+                          </div>
+                        </div>
+                      `;
           lista.appendChild(div);
         });
       }
@@ -113,8 +113,43 @@
     mostrarCarrito();
   };
 
+  function initializeSliders() {
+    document.querySelectorAll('.slider').forEach(slider => {
+      const images = slider.querySelectorAll('img');
+      const prevButton = slider.querySelector('.prev');
+      const nextButton = slider.querySelector('.next');
+      let currentIndex = 0;
+
+      if (images.length === 0 || !prevButton || !nextButton) return;
+
+      function updateSlider() {
+        images.forEach((img, index) => {
+          img.classList.remove('active');
+        });
+
+        if (images[currentIndex]) {
+          images[currentIndex].classList.add('active');
+        }
+      }
+
+      updateSlider();
+
+      nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateSlider();
+      });
+
+      prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateSlider();
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     _actualizarBadge();
+
+    initializeSliders();
 
     document.querySelectorAll('.agregar-btn').forEach(btn => {
       const handler = () => {
