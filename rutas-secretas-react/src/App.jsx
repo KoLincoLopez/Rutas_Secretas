@@ -1,27 +1,40 @@
 // src/App.jsx
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import React from 'react';
-// Importamos el CSS de Bootstrap (instalado vía npm)
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+// Páginas
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Registro from "./pages/Registro";
+import Blogs from "./pages/Blogs";
+import Productos from "./pages/Productos";
+import Nosotros from "./pages/Nosotros";
+import Contacto from "./pages/Contact";
+import Detalle from "./pages/Detalle";
+import Carrito from "./pages/Carrito";
 
-// Importamos tus estilos CSS
-import './styles/Global.css'; 
-import './styles/Index.css'; 
-
-import Navbar from './components/Navbar'; 
-import Footer from './components/Footer'; 
-import Home from './pages/Home'; // El contenido principal de tu Index.html
+import { CarritoProvider } from "./Hook/CarritoProvider";
 
 function App() {
-  // Nota: En una aplicación con múltiples páginas, aquí usarías React Router 
-  // para cambiar el componente entre <Home />, <Productos />, etc.
-  
   return (
-    <>
-      <Navbar />
-      <Home /> {/* Esto contiene todo el <main> */}
-      <Footer />
-    </>
+    <CarritoProvider>
+      <Router>
+        <Routes>
+
+          <Route path="/login" element={<Login />} />
+          <Route path="/registro" element={<Registro />} />
+
+          <Route path="/" element={<Home />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/productos" element={<Productos />} />
+          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/detalle/:id" element={<Detalle />} />
+          <Route path="/carrito" element={<Carrito />} />
+
+        </Routes>
+      </Router>
+    </CarritoProvider>
   );
 }
 
