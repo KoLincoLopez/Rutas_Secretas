@@ -9,11 +9,11 @@ import Registro from "./pages/Registro";
 import Blogs from "./pages/Blogs";
 import Productos from "./pages/Productos";
 import Nosotros from "./pages/Nosotros";
-import Contacto from "./pages/Contact";
+import Contacto from "./pages/Contactos";
 import Detalle from "./pages/Detalle";
 import Carrito from "./pages/Carrito";
 
-import { CarritoProvider } from "./Hook/CarritoProvider";
+import { CarritoProvider } from "./hook/CarritoProvider.jsx";
 
 function App() {
   return (

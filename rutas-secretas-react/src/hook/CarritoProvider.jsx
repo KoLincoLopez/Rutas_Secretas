@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { useCarrito as useCarritoLogic } from './useCarrito'; 
+import { useCarrito as useCarritoLogic } from './useCarrito.js'; 
 
 const CarritoContext = createContext();
 
