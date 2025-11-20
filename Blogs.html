@@ -26,10 +26,10 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link " href="Index.html">Home</a>
+                        <a class="nav-link active" href="Index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="Productos.html">Tours</a>
+                        <a class="nav-link" href="Productos.html">Tours</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Nosotros.html">Nosotros</a>
@@ -40,18 +40,40 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="Contactos.html">Contacto</a></li>
-                            <li><a class="dropdown-item active" href="Blogs.html">Blogs</a></li>
+                            <li><a class="dropdown-item" href="Blogs.html">Blogs</a></li>
                         </ul>
                     </li>
                 </ul>
 
-                <div class="navbar-right d-flex align-items-center">
-                    <a href="Carrito.html" class="nav-btn">Carrito</a>
-                    <a href="Login.html" class="nav-btn highlight ms-2">Iniciar Sesión</a>
+                <!-- Zona usuario -->
+                <div class="navbar-right d-flex align-items-center" id="userArea">
+                    <!-- Aquí se carga dinámicamente el panel flotante -->
+                    <div class="user-menu-container hidden" id="userMenuContainer">
+                        <div id="userMenuToggle" class="user-toggle">
+                            <img src="Images/Vintage_nature-preview.png" class="user-avatar" alt="user">
+                            <span id="userNameLabel">Usuario</span>
+                            <span class="arrow">▼</span>
+                        </div>
+
+                        <div id="userPanel" class="user-panel hidden">
+                            <div class="user-info">
+                                <img src="Images/Vintage_nature-preview.png" class="user-avatar-large">
+                                <p id="panelUserName" class="user-name"></p>
+                                <p id="panelUserEmail" class="user-email"></p>
+                            </div>
+                            <hr>
+                            <button class="user-btn">Mi Perfil</button>
+                            <button id="logoutBtn" class="user-btn logout">Cerrar Sesión</button>
+                        </div>
+                    </div>
+
+                    <a href="Carrito.html" class="nav-btn ms-2" id="carritoBtn">Carrito</a>
+                    <a href="Login.html" class="nav-btn highlight ms-2" id="loginBtn">Iniciar Sesión</a>
                 </div>
             </div>
         </div>
     </nav>
+
     <section class="blog-section">
         <h1>Nuestro Blog de Viajes</h1>
         <p>Descubre experiencias únicas, consejos y relatos de aventuras por Chile.</p>
@@ -101,6 +123,8 @@
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Js/UserState.js"></script>
+
 </body>
 
 </html>

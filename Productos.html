@@ -27,10 +27,10 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link " href="Index.html">Home</a>
+            <a class="nav-link" href="Index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active " href="Productos.html">Tours</a>
+            <a class="nav-link active" href="Productos.html">Tours</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Nosotros.html">Nosotros</a>
@@ -46,194 +46,223 @@
           </li>
         </ul>
 
-        <div class="navbar-right d-flex align-items-center">
-          <a href="Carrito.html" class="nav-btn">Carrito</a>
-          <a href="Login.html" class="nav-btn highlight ms-2">Iniciar Sesión</a>
+        <div class="navbar-right d-flex align-items-center" id="userArea">
+          <div class="user-menu-container hidden" id="userMenuContainer">
+            <div id="userMenuToggle" class="user-toggle">
+              <img src="Images/Vintage_nature-preview.png" class="user-avatar" alt="user">
+              <span id="userNameLabel">Usuario</span>
+              <span class="arrow">▼</span>
+            </div>
+
+            <div id="userPanel" class="user-panel hidden">
+              <div class="user-info">
+                <img src="Images/Vintage_nature-preview.png" class="user-avatar-large">
+                <p id="panelUserName" class="user-name"></p>
+                <p id="panelUserEmail" class="user-email"></p>
+              </div>
+              <hr>
+              <button class="user-btn">Mi Perfil</button>
+              <button id="logoutBtn" class="user-btn logout">Cerrar Sesión</button>
+            </div>
+          </div>
+
+          <a href="Carrito.html" class="nav-btn ms-2" id="carritoBtn">Carrito <span class="cart-count">0</span></a>
+          <a href="Login.html" class="nav-btn highlight ms-2" id="loginBtn">Iniciar Sesión</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <main class="container mt-5 pt-5">
-    <h2 class="text-center mb-4"> Nuestros Tours </h2>
+ <main class="container mt-5 pt-5 py-5">
+    <h2 class="text-center mb-5"> Nuestro Catálogo de Tours </h2>
+    
     <div class="productos-grid">
 
       <div class="producto-card">
-        <div class="slider">
-          <button class="prev"><i class="fas fa-chevron-left"></i></button>
-
-          <img src="https://lastorres.com/content/uploads/header-torres-del-paine-parque-nacional-375x340-1.png"
-            class="active">
-          <img src="https://torresdelpaine.com/wp-content/uploads/sites/6/2023/08/actividad-icehike-41-600x338.jpg">
-          <img src="https://torresdelpaine.com/wp-content/uploads/sites/6/2024/10/KayakGrey1-600x338.jpg">
-
-          <button class="next"><i class="fas fa-chevron-right"></i></button>
+        <a href="Detalle.html?id=4">
+            <img src="https://lastorres.com/content/uploads/header-torres-del-paine-parque-nacional-375x340-1.png"
+              class="card-img-top-compacta" alt="Torres del Paine">
+        </a>
+        <div class="card-body-compacto">
+            <h5 class="titulo-compacto">Torres del Paine</h5>
+            <p class="categoria categoria-compacta">
+              <i class="fas fa-map-marker-alt"></i> Maravillas de la Patagonia
+            </p>
+            <div class="price-button-compact">
+              <span class="precio precio-compacto">$120.000 CLP</span>
+              <div class="d-flex">
+                <a href="Detalle.html?id=4" class="btn btn-primary btn-sm me-2">Detalles</a>
+                <button class="agregar-btn btn btn-success btn-sm" data-nombre="Torres del Paine" data-precio="120000"
+                  data-img="URL_IMAGEN">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
         </div>
-        <h3>Torres del Paine</h3>
-        <p>Trekking y paisajes inolvidables.</p>
-        <p class="descripcion">
-          Descubre uno de los parques más famosos del mundo, con glaciares, montañas y fauna única.
-          Este tour incluye transporte, guía especializado y entradas a los miradores más impresionantes.
-        </p>
-        <p><strong>$120.000 CLP</strong></p>
-        <button class="agregar-btn" data-nombre="Torres del Paine" data-precio="120000"
-          data-img="https://torresdelpaine.com/wp-content/uploads/sites/6/2024/10/KayakGrey1-600x338.jpg">
-          Agregar al carrito
-        </button>
       </div>
 
       <div class="producto-card">
-        <div class="slider">
-          <button class="prev">❮</button>
-          <img src="https://www.gochile.cl/fotos/thumb2/75432-177739392@2x.jpg" class="active">
-          <img src="https://angelmotours.cl/wp-content/uploads/2016/05/chiloe-1030x687.jpg">
-          <img
-            src="https://www.gochile.cl/fotos/full/108150-parque-nacional-chiloe-shutterstock-id44-mpo20az3bv4x3wqfjpiose7kj05nafsdkmbqe231rk.jpg">
-          <button class="next">❯</button>
+        <a href="Detalle.html?id=5">
+            <img src="https://www.gochile.cl/fotos/thumb2/75432-177739392@2x.jpg" class="card-img-top-compacta" alt="Chiloé">
+        </a>
+        <div class="card-body-compacto">
+            <h5 class="titulo-compacto">Chiloé</h5>
+            <p class="categoria categoria-compacta">
+              <i class="fas fa-map-marker-alt"></i> Leyendas y Arquitectura Sureña
+            </p>
+            <div class="price-button-compact">
+              <span class="precio precio-compacto">$95.000 CLP</span>
+              <div class="d-flex">
+                <a href="Detalle.html?id=5" class="btn btn-primary btn-sm me-2">Detalles</a>
+                <button class="agregar-btn btn btn-success btn-sm" data-nombre="Chiloé" data-precio="95000"
+                  data-img="URL_IMAGEN">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
         </div>
-        <h3>Chiloé</h3>
-        <p>Iglesias patrimoniales y gastronomía local.</p>
-        <p class="descripcion">
-          Vive la magia de Chiloé visitando iglesias patrimoniales, mercados artesanales y degustando la
-          gastronomía típica. Una experiencia inolvidable en este rincón lleno de cultura y tradición.
-        </p>
-        <p><strong>$95.000 CLP</strong></p>
-        <button class="agregar-btn" data-nombre="Chiloe" data-precio="95000"
-          data-img="https://www.gochile.cl/fotos/full/108150-parque-nacional-chiloe-shutterstock-id44-mpo20az3bv4x3wqfjpiose7kj05nafsdkmbqe231rk.jpg">
-          Agregar al carrito
-        </button>
       </div>
-
+      
       <div class="producto-card">
-        <div class="slider">
-          <button class="prev">❮</button>
-          <img src="https://www.gochile.cl/fotos/thumb2/105916-105722-chilevacaciones-region-de-los-lagos-img006@2x.jpg"
-            class="active">
-          <img
-            src="https://www.gochile.cl/fotos/thumb2/105915-105610-14700791_1254267347978399_2625816188240095663_o@2x.jpg">
-          <img src="https://www.gochile.cl/fotos/thumb2/107025-106906-turismo-anuncios-1805-1@2x.jpg">
-          <button class="next">❯</button>
+        <a href="Detalle.html?id=6">
+            <img src="https://www.gochile.cl/fotos/thumb2/105916-105722-chilevacaciones-region-de-los-lagos-img006@2x.jpg"
+              class="card-img-top-compacta" alt="Pucón">
+        </a>
+        <div class="card-body-compacto">
+            <h5 class="titulo-compacto">Pucón</h5>
+            <p class="categoria categoria-compacta">
+              <i class="fas fa-map-marker-alt"></i> Aventura en la Araucanía
+            </p>
+            <div class="price-button-compact">
+              <span class="precio precio-compacto">$110.000 CLP</span>
+              <div class="d-flex">
+                <a href="Detalle.html?id=6" class="btn btn-primary btn-sm me-2">Detalles</a>
+                <button class="agregar-btn btn btn-success btn-sm" data-nombre="Pucón" data-precio="110000"
+                  data-img="URL_IMAGEN">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
         </div>
-        <h3>Pucón</h3>
-        <p>Volcanes, lagos y aventura.</p>
-        <p class="descripcion">
-          Vive una jornada de aventura en Pucón con visitas a cascadas y finaliza relajándote en las Termas Geométricas
-          rodeadas de naturaleza. Incluye transporte, guía y entradas.
-        </p>
-        <p><strong>$110.000 CLP</strong></p>
-        <button class="agregar-btn" data-nombre="Volcanes, lagos y aventura" data-precio="110000"
-          data-img="https://www.gochile.cl/fotos/thumb2/107025-106906-turismo-anuncios-1805-1@2x.jpg">
-          Agregar al carrito
-        </button>
       </div>
-
+      
       <div class="producto-card">
-        <div class="slider">
-          <button class="prev">❮</button>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Corral%2C_2019_%2809%29.jpg" class="active">
-          <img
-            src="https://lh5.googleusercontent.com/proxy/kt5RecmvnNSaEZaMaElGeDhKfmrJDpVGTLnC_ETk3zBkNnpIOIhWQxcMgm9aAQe0MAeU-Uul9QCq58IdT1B5ZNYFgQumUvAXkxuxAmvUaGRQCNGWy2cSvE9rtbCd_-k_g8Y">
-          <img src="https://www.armada.cl/armada/site/artic/20150323/imag/foto_0000001020150323152008.jpg">
-          <button class="next">❯</button>
+        <a href="Detalle.html?id=7">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Corral%2C_2019_%2809%29.jpg" class="card-img-top-compacta"
+              alt="Valdivia y Corral">
+        </a>
+        <div class="card-body-compacto">
+            <h5 class="titulo-compacto">Valdivia y Corral</h5>
+            <p class="categoria categoria-compacta">
+              <i class="fas fa-map-marker-alt"></i> Historia Fluvial y Cerveza Artesanal
+            </p>
+            <div class="price-button-compact">
+              <span class="precio precio-compacto">$85.000 CLP</span>
+              <div class="d-flex">
+                <a href="Detalle.html?id=7" class="btn btn-primary btn-sm me-2">Detalles</a>
+                <button class="agregar-btn btn btn-success btn-sm" data-nombre="Valdivia y Corral" data-precio="85000"
+                  data-img="URL_IMAGEN">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
         </div>
-        <h3>Valdivia y Corral</h3>
-        <p class="descripcion">
-          Disfruta de la belleza de Valdivia recorriendo sus ríos, fuertes históricos y mercados costeros. Incluye un
-          paseo en bote por la Bahía de Corral y degustación de cervezas artesanales locales.
-        </p>
-        <p><strong>$85.0000 CLP</strong></p>
-        <button class="agregar-btn" data-nombre="Puerto Montt" data-precio="850000"
-          data-img="https://www.armada.cl/armada/site/artic/20150323/imag/foto_0000001020150323152008.jpg">
-          Agregar al carrito
-        </button>
       </div>
-
+      
       <div class="producto-card">
-        <div class="slider">
-          <button class="prev">❮</button>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtJUdoA-tyOx0eQ-AztZmgsHUOTrKKvTAHag&s"
-            class="active">
-          <img src="https://storage.googleapis.com/chile-travel-cdn/2021/07/carretera-austral_prin-min.jpg">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHLERUivb8U2U1FrjjU6BevmXx6prY1xxhhg&s">
-          <button class="next">❯</button>
+        <a href="Detalle.html?id=8">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtJUdoA-tyOx0eQ-AztZmgsHUOTrKKvTAHag&s"
+              class="card-img-top-compacta" alt="Futaleufú">
+        </a>
+        <div class="card-body-compacto">
+            <h5 class="titulo-compacto">Carretera Austral – Futaleufú</h5>
+            <p class="categoria categoria-compacta">
+              <i class="fas fa-map-marker-alt"></i> Paraíso del Rafting y Ríos Turquesas
+            </p>
+            <div class="price-button-compact">
+              <span class="precio precio-compacto">$150.000 CLP</span>
+              <div class="d-flex">
+                <a href="Detalle.html?id=8" class="btn btn-primary btn-sm me-2">Detalles</a>
+                <button class="agregar-btn btn btn-success btn-sm" data-nombre="Carretera Austral – Futaleufú" data-precio="150000"
+                  data-img="URL_IMAGEN">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
         </div>
-        <h3>Carretera Austral – Futaleufú</h3>
-        <p class="descripcion">
-          Explora una de las rutas más hermosas de Chile recorriendo ríos de aguas turquesas, glaciares y bosques
-          prístinos. Ideal para quienes buscan contacto directo con la naturaleza y actividades como rafting.
-        </p>
-        <p><strong>$150.000 CLP</strong></p>
-        <button class="agregar-btn" data-nombre="Puerto Montt" data-precio="150000"
-          data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHLERUivb8U2U1FrjjU6BevmXx6prY1xxhhg&s">
-          Agregar al carrito
-        </button>
       </div>
-
+      
       <div class="producto-card">
-        <div class="slider">
-          <button class="prev">❮</button>
-          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/ac/af/8c/photo0jpg.jpg?w=1200&h=1200&s=1"
-            class="active">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Saltos_del_petrohue_01b.jpg">
-          <img src="https://angelmotours.cl/wp-content/uploads/2023/03/Saltos-del-Petrohue.jpg">
-          <button class="next">❯</button>
+        <a href="Detalle.html?id=9">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/ac/af/8c/photo0jpg.jpg?w=1200&h=1200&s=1"
+              class="card-img-top-compacta" alt="Puerto Varas y Saltos del Petrohué">
+        </a>
+        <div class="card-body-compacto">
+            <h5 class="titulo-compacto">Puerto Varas y Saltos del Petrohué</h5>
+            <p class="categoria categoria-compacta">
+              <i class="fas fa-map-marker-alt"></i> Paisajes Lacustres y Volcanes
+            </p>
+            <div class="price-button-compact">
+              <span class="precio precio-compacto">$100.000 CLP</span>
+              <div class="d-flex">
+                <a href="Detalle.html?id=9" class="btn btn-primary btn-sm me-2">Detalles</a>
+                <button class="agregar-btn btn btn-success btn-sm" data-nombre="Puerto Varas y Saltos del Petrohué" data-precio="100000"
+                  data-img="URL_IMAGEN">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
         </div>
-        <h3>Puerto Varas y Saltos del Petrohué</h3>
-        <p class="descripcion">
-          Explora una de las rutas más hermosas de Chile recorriendo ríos de aguas turquesas, glaciares y bosques
-          prístinos. Ideal para quienes buscan contacto directo con la naturaleza y actividades como rafting.
-        </p>
-        <p><strong>$100.000 CLP</strong></p>
-        <button class="agregar-btn" data-nombre="Puerto Montt" data-precio="100000"
-          data-img="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/ac/af/8c/photo0jpg.jpg?w=1200&h=1200&s=1">
-          Agregar al carrito
-        </button>
       </div>
-
+      
       <div class="producto-card">
-        <div class="slider">
-          <button class="prev">❮</button>
-          <img src="https://todopatagonia.net/wp-content/uploads/2018/08/pinguinos-magallanicos-isla-magdalena.jpg"
-            class="active">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBiT78MvaMj4KXZ_eWJ9rglAtwqSK8AjvFXA&s">
-          <img
-            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/d7/57/88/il-faro-del-capo.jpg?w=300&h=300&s=1">
-          <button class="next">❯</button>
+        <a href="Detalle.html?id=10">
+            <img src="https://todopatagonia.net/wp-content/uploads/2018/08/pinguinos-magallanicos-isla-magdalena.jpg"
+              class="card-img-top-compacta" alt="Isla Magdalena – Punta Arenas">
+        </a>
+        <div class="card-body-compacto">
+            <h5 class="titulo-compacto">Isla Magdalena – Punta Arenas</h5>
+            <p class="categoria categoria-compacta">
+              <i class="fas fa-map-marker-alt"></i> Encuentro con la Fauna Patagónica
+            </p>
+            <div class="price-button-compact">
+              <span class="precio precio-compacto">$130.000 CLP</span>
+              <div class="d-flex">
+                <a href="Detalle.html?id=10" class="btn btn-primary btn-sm me-2">Detalles</a>
+                <button class="agregar-btn btn btn-success btn-sm" data-nombre="Isla Magdalena – Punta Arenas" data-precio="130000"
+                  data-img="URL_IMAGEN">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
         </div>
-        <h3>Isla Magdalena – Punta Arenas</h3>
-        <p class="descripcion">
-          Navega por el estrecho de Magallanes para conocer la Isla Magdalena y observar la increíble colonia de
-          pingüinos
-          magallánicos en su hábitat natural.
-        </p>
-        <p><strong>$130.000 CLP</strong></p>
-        <button class="agregar-btn" data-nombre="Puerto Montt" data-precio="130000 "
-          data-img="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/d7/57/88/il-faro-del-capo.jpg?w=300&h=300&s=1">
-          Agregar al carrito
-        </button>
       </div>
-
+      
       <div class="producto-card">
-        <div class="slider">
-          <button class="prev">❮</button>
-          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5b/a2/4c/caption.jpg?w=600&h=400&s=1"
-            class="active">
-          <img
-            src="https://blog.uber-cdn.com/cdn-cgi/image/width=2160,quality=80,onerror=redirect,format=auto/wp-content/uploads/2018/12/Actividades-fascinantes-que-puedes-hacer-en-Puerto-Montt.jpg">
-          <img
-            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/dd/bc/7f/palafitos-construcciones.jpg?w=600&h=400&s=1">
-          <button class="next">❯</button>
+        <a href="Detalle.html?id=11">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5b/a2/4c/caption.jpg?w=600&h=400&s=1"
+              class="card-img-top-compacta" alt="Puerto Montt">
+        </a>
+        <div class="card-body-compacto">
+            <h5 class="titulo-compacto">Puerto Montt</h5>
+            <p class="categoria categoria-compacta">
+              <i class="fas fa-map-marker-alt"></i> Puerta de Entrada a la Patagonia
+            </p>
+            <div class="price-button-compact">
+              <span class="precio precio-compacto">$100.000 CLP</span>
+              <div class="d-flex">
+                <a href="Detalle.html?id=11" class="btn btn-primary btn-sm me-2">Detalles</a>
+                <button class="agregar-btn btn btn-success btn-sm" data-nombre="Puerto Montt" data-precio="100000"
+                  data-img="URL_IMAGEN">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
         </div>
-        <h3>Puerto Montt</h3>
-        <p>Paisajes y cultura del sur.</p>
-        <p><strong>$100.000 CLP</strong></p>
-        <button class="agregar-btn" data-nombre="Puerto Montt" data-precio="100000 "
-          data-img="https://blog.uber-cdn.com/cdn-cgi/image/width=2160,quality=80,onerror=redirect,format=auto/wp-content/uploads/2018/12/Actividades-fascinantes-que-puedes-hacer-en-Puerto-Montt.jpg">
-          Agregar al carrito
-        </button>
       </div>
+      
     </div>
-  </main>
+    </main>
 
   <div id="toast-carrito" class="toast-carrito">¡Se agregó al carrito!</div>
 
@@ -244,18 +273,20 @@
     </div>
     <div class="footer-bottom">
       <nav class="footer-nav">
-        <a href="#">Inicio</a>
-        <a href="#">Paquetes</a>
-        <a href="#">Contacto</a>
-        <a href="#">Nosotros</a>
+        <a href="Index.html">Inicio</a>
+        <a href="Productos.html">Paquetes</a>
+        <a href="Contactos.html">Contacto</a>
+        <a href="Nosotros.html">Nosotros</a>
       </nav>
-      <p class="footer-copy">&copy; 2018 Rutas Secretas Chile. Todos los derechos reservados</p>
+      <p class="footer-copy">© 2018 Rutas Secretas Chile. Todos los derechos reservados</p>
     </div>
 
   </footer>
 
   <script src="Js/Producto.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Js/UserState.js"></script>
+
 </body>
 
 </html>

@@ -8,9 +8,8 @@ const nombreError = document.getElementById('nombreError');
 const emailError = document.getElementById('emailError');
 const mensajeError = document.getElementById('mensajeError');
 
-// Función para validar email
 function validarEmail(email) {
-  if (!email) return true; // el correo no es obligatorio
+  if (!email) return true;
   if (email.length > 100) return false;
   const re = /^[^\s@]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/i;
   return re.test(email);
@@ -19,14 +18,12 @@ function validarEmail(email) {
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  // Limpiar errores previos
   nombreError.textContent = '';
   emailError.textContent = '';
   mensajeError.textContent = '';
 
   let valido = true;
 
-  // Validar nombre
   const nombre = nombreInput.value.trim();
   if (!nombre) {
     nombreError.textContent = 'El nombre es obligatorio.';
@@ -36,14 +33,12 @@ form.addEventListener('submit', function (e) {
     valido = false;
   }
 
-  // Validar email
   const email = emailInput.value.trim();
   if (!validarEmail(email)) {
     emailError.textContent = 'Correo inválido. Debe ser @duoc.cl, @profesor.duoc.cl o @gmail.com y máximo 100 caracteres.';
     valido = false;
   }
 
-  // Validar mensaje
   const mensaje = mensajeInput.value.trim();
   if (!mensaje) {
     mensajeError.textContent = 'El mensaje es obligatorio.';
@@ -55,7 +50,6 @@ form.addEventListener('submit', function (e) {
 
   if (!valido) return;
 
-  // Si todo es válido, simular envío o guardar en localStorage
   const contacto = {
     nombre,
     email,
@@ -67,7 +61,6 @@ form.addEventListener('submit', function (e) {
   contactos.push(contacto);
   localStorage.setItem('contactos', JSON.stringify(contactos));
 
-  // Mostrar toast de éxito
   const successToast = document.createElement('div');
   successToast.textContent = 'Mensaje enviado correctamente.';
   successToast.className = 'toast-success';

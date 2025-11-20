@@ -1,5 +1,4 @@
 #carrito-titulo {
-    position: sticky;
     top: 70px; 
     background-color: #ffffff; 
     z-index: 1000;
@@ -110,4 +109,48 @@
     #listaCarrito li {
         max-width: 100%;
     }
+}
+
+.resumen-orden {
+    background-color: #f8f9fa; 
+    border-radius: 8px;
+    position: sticky; 
+    top: 80px; 
+}
+
+#Pagar.btn-full-width {
+    width: 100%;
+    background-color: #2536a3; 
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease; 
+    font-weight: bold;
+}
+
+.btn-outline-full-width {
+    width: 100%;
+    background-color: #e9ecef; 
+    color: #6c757d; 
+    border: 1px solid #ced4da;
+    padding: 10px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease; 
+    font-weight: 500;
+}
+
+.btn-outline-full-width:hover {
+    background-color: #ced4da;
+}
+
+#Pagar {
+    width: 100% !important; 
+}
+
+.card-img-top {
+    height: 200px; 
+    object-fit: cover;
 }
