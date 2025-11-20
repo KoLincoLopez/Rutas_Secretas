@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Css/Global.css">
+    <link rel="stylesheet" href="Css/Nosotros.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="Index.html">
+                <img src="Images/logo_basic.png" alt="Rutas Secretas" class="navbar-logo me-2">
+                <span class="brand-text fs-4">Rutas Secretas</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Productos.html">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Más
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Contactos.html">Contacto</a></li>
+                            <li><a class="dropdown-item" href="Blogs.html">Blogs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Zona usuario -->
+                <div class="navbar-right d-flex align-items-center" id="userArea">
+                    <!-- Aquí se carga dinámicamente el panel flotante -->
+                    <div class="user-menu-container hidden" id="userMenuContainer">
+                        <div id="userMenuToggle" class="user-toggle">
+                            <img src="Images/Vintage_nature-preview.png" class="user-avatar" alt="user">
+                            <span id="userNameLabel">Usuario</span>
+                            <span class="arrow">▼</span>
+                        </div>
+
+                        <div id="userPanel" class="user-panel hidden">
+                            <div class="user-info">
+                                <img src="Images/Vintage_nature-preview.png" class="user-avatar-large">
+                                <p id="panelUserName" class="user-name"></p>
+                                <p id="panelUserEmail" class="user-email"></p>
+                            </div>
+                            <hr>
+                            <button class="user-btn">Mi Perfil</button>
+                            <button id="logoutBtn" class="user-btn logout">Cerrar Sesión</button>
+                        </div>
+                    </div>
+
+                    <a href="Carrito.html" class="nav-btn ms-2" id="carritoBtn">Carrito</a>
+                    <a href="Login.html" class="nav-btn highlight ms-2" id="loginBtn">Iniciar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1 class="fs-1 text-center">Descubre Chile de manera única</h1>
+    </section>
+
+    <section class="contenido-nosotros px-3">
+        <h2 class="text-center mb-4">Quiénes Somos</h2>
+        <p class="text-center mb-5">
+            En <strong>Rutas Secretas</strong> nos apasiona mostrar la belleza de Chile más allá de los circuitos
+            turísticos tradicionales.
+            Nos especializamos en <strong>tours por lugares poco conocidos</strong>, pero igual de impresionantes y
+            memorables.
+        </p>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card card-nosotros">
+                    <img src="https://i0.wp.com/sinmordaza.com/wp-content/uploads/2019/01/PATAGONIA.jpg?fit=696%2C464&ssl=1"
+                        class="card-img-top" alt="Patagonia">
+                    <div class="card-body">
+                        <h5 class="card-title">Aventuras en la Patagonia</h5>
+                        <p class="card-text">Senderos escondidos, glaciares y paisajes que pocos turistas conocen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-nosotros">
+                    <img src="https://mayurutour.com/wp-content/uploads/2020/01/Salar-de-surire.jpg"
+                        class="card-img-top" alt="Desierto del Norte">
+                    <div class="card-body">
+                        <h5 class="card-title">Rincones del Norte</h5>
+                        <p class="card-text">Explora valles y salares poco visitados que guardan secretos
+                            milenarios.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-nosotros">
+                    <img src="https://storage.googleapis.com/chile-travel-cdn/2021/07/lago-llanquihue_prin-min.jpg"
+                        class="card-img-top" alt="Lagos del Sur">
+                    <div class="card-body">
+                        <h5 class="card-title">Lagos del Sur</h5>
+                        <p class="card-text">Rutas fluviales y bosques prístinos para disfrutar de la naturaleza en
+                            su estado más puro.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-nosotros">
+                    <img src="https://cecinasllanquihue.cl/blog/wp-content/uploads/2021/09/shutterstock_311418290-scaled.jpg"
+                        class="card-img-top" alt="Cultura Local">
+                    <div class="card-body">
+                        <h5 class="card-title">Cultura y Tradición</h5>
+                        <p class="card-text">Conéctate con la historia y la cultura local visitando pueblos y
+                            comunidades auténticas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-simple">
+        <div class="footer-top">
+            <img src="Images\logo_basic.png" alt="Logo" class="footer-logo">
+            <p class="footer-slogan">Descubre Chile como nunca antes</p>
+        </div>
+        <div class="footer-bottom">
+            <nav class="footer-nav">
+                <a href="#">Inicio</a>
+                <a href="#">Paquetes</a>
+                <a href="#">Contacto</a>
+                <a href="#">Nosotros</a>
+            </nav>
+            <p class="footer-copy">&copy; 2018 Rutas Secretas Chile. Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Js/UserState.js"></script>
+
+</body>
+
+</html>
