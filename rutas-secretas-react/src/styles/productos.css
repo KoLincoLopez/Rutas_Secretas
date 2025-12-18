@@ -1,0 +1,162 @@
+body {
+  background: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  border-radius: 15px;
+  background: #fff;
+}
+
+.btn-primary {
+  background-color: #0d47a1;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1565c0;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.producto-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px; 
+  margin: 0 auto;
+}
+
+.producto-card:hover {
+  transform: scale(1.03);
+}
+
+.producto-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.producto-card .descripcion {
+  font-size: 0.95rem;
+  color: #333;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.producto-card .precio {
+  font-weight: bold;
+  color: #000;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.slider img.active {
+  display: block;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.256);
+  color: #fff;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 1.2rem; 
+  line-height: 1; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider .prev {
+  left: 10px;
+}
+
+.slider .next {
+  right: 10px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #0d47a1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #00000088;
+}
+
+@media (max-width: 768px) {
+  .productos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .producto-card {
+    max-width: 100%;
+  }
+}
+
+.toast-carrito {
+  position: fixed;
+  top: 80px; 
+  right: 20px;
+  background-color: #0d47a1; 
+  color: #fff; 
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1055;
+}
+
+.toast-carrito.show {
+  opacity: 1;
+}
+
+
+
+
